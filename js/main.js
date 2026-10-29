@@ -259,7 +259,6 @@
         startEl.classList.add('hide');
         startEl.setAttribute('aria-hidden', 'true');
         gated.forEach((el) => { el.inert = false; });
-        document.getElementById('home').focus({ preventScroll: true });
         sfxOn = true;
         soundBtn.setAttribute('aria-pressed', 'true');
         jingle();
@@ -277,7 +276,6 @@
     };
     document.addEventListener('keydown', (e) => {
         if (!started) { if (e.key === 'Enter') begin(); return; }
-        if (e.target.closest('input, textarea, select, [contenteditable="true"]')) return;
         if (e.key === 'ArrowRight') go(1);
         else if (e.key === 'ArrowLeft') go(-1);
         else if (e.key >= '1' && e.key <= '5') {
