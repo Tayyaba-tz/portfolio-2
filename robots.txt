@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://tayyaba-portfolio-2.vercel.app/sitemap.xml

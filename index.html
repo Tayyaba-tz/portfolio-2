@@ -3,29 +3,36 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tayyaba Zubaid | Frontend Engineer</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <meta name="theme-color" content="#ffffff">
     <meta name="description"
-        content="Portfolio of Tayyaba Zubaid, former Frontend Engineering Intern at FlyRank and Computer Science student in Lahore, Pakistan.">
+        content="Tayyaba Zubaid's portfolio of accessible, responsive web interfaces, full-stack projects, and software experiments.">
+    <meta name="robots" content="index, follow, max-image-preview:large">
+    <link rel="canonical" href="https://tayyaba-portfolio-2.vercel.app/">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Tayyaba Zubaid | Frontend Engineer">
+    <meta property="og:description"
+        content="Explore accessible, responsive web interfaces and full-stack projects by Tayyaba Zubaid.">
+    <meta property="og:url" content="https://tayyaba-portfolio-2.vercel.app/">
+    <meta property="og:image" content="https://tayyaba-portfolio-2.vercel.app/assets/profile.png">
+    <meta name="twitter:card" content="summary_large_image">
     <link rel="icon" href="data:,">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Syne:wght@600;700;800&display=swap"
-        rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+    <a class="skip-link" href="#home">Skip to content</a>
 
     <!-- START SCREEN -->
-    <div class="start-screen" id="start" role="dialog" aria-label="Start screen">
+    <div class="start-screen" id="start" role="dialog" aria-modal="true" aria-labelledby="start-title"
+        aria-describedby="start-hint">
         <div class="start-inner">
             <span class="badge badge-accent">Frontend Engineer</span>
-            <p class="start-name">TAYYABA<br><span>ZUBAID</span></p>
+            <p class="start-name" id="start-title">TAYYABA<br><span>ZUBAID</span></p>
             <div class="load-bar" aria-hidden="true"><i></i></div>
             <button class="btn btn-primary btn-start" id="start-btn" autofocus>Press Start</button>
-            <p class="start-hint">Press Enter to begin. Use the arrow keys or 1 to 5 to move between stages.</p>
+            <p class="start-hint" id="start-hint">Press Enter to begin. Use the arrow keys or 1 to 5 to move between
+                stages.</p>
         </div>
     </div>
 
@@ -48,7 +55,7 @@
             <a class="btn btn-primary btn-sm" href="assets/Tayyaba_Zubaid_CV.pdf" download>
                 <span class="long-label">Download&nbsp;</span>CV
             </a>
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false"
+            <button class="hamburger" id="hamburger" aria-label="Open navigation menu" aria-expanded="false"
                 aria-controls="nav-links">
                 <span></span><span></span><span></span>
             </button>
@@ -58,7 +65,7 @@
     <main>
 
         <!-- HOME -->
-        <section class="view active" id="home" aria-labelledby="home-title">
+        <section class="view active" id="home" aria-labelledby="home-title" tabindex="-1">
             <span class="deco deco-blob" aria-hidden="true"></span>
             <span class="deco deco-ring" aria-hidden="true"></span>
             <aside class="player-card" aria-label="Player card">
@@ -92,7 +99,7 @@
         </section>
 
         <!-- ABOUT -->
-        <section class="view" id="about" aria-labelledby="about-title">
+        <section class="view" id="about" aria-labelledby="about-title" tabindex="-1">
             <div class="wrap about-grid">
                 <div class="about-visual">
                     <div class="blob" aria-hidden="true"></div>
@@ -120,71 +127,88 @@
         </section>
 
         <!-- SKILLS -->
-        <section class="view" id="skills" aria-labelledby="skills-title">
+        <section class="view" id="skills" aria-labelledby="skills-title" tabindex="-1">
             <div class="wrap">
                 <h2 id="skills-title" class="view-title">Technical Skills</h2>
                 <div class="skills-grid">
                     <article class="skill-group">
                         <h3>Languages</h3>
                         <div class="skill"><span>JavaScript</span>
-                            <div class="track"><i class="fill" data-level="85"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="85"><i class="fill" data-level="85"></i></div>
                         </div>
                         <div class="skill"><span>Python</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="80"><i class="fill" data-level="80"></i></div>
                         </div>
                         <div class="skill"><span>Java</span>
-                            <div class="track"><i class="fill" data-level="75"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="75"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>C++</span>
-                            <div class="track"><i class="fill" data-level="75"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="75"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>SQL</span>
-                            <div class="track"><i class="fill" data-level="60"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="60"><i class="fill" data-level="60"></i></div>
                         </div>
                     </article>
                     <article class="skill-group">
                         <h3>Frontend</h3>
                         <div class="skill"><span>HTML5 and CSS3</span>
-                            <div class="track"><i class="fill" data-level="90"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="90"><i class="fill" data-level="90"></i></div>
                         </div>
                         <div class="skill"><span>React</span>
-                            <div class="track"><i class="fill" data-level="82"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="82"><i class="fill" data-level="82"></i></div>
                         </div>
                         <div class="skill"><span>React Router and Context</span>
-                            <div class="track"><i class="fill" data-level="78"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="78"><i class="fill" data-level="78"></i></div>
                         </div>
                         <div class="skill"><span>Accessible design</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="80"><i class="fill" data-level="80"></i></div>
                         </div>
                     </article>
                     <article class="skill-group">
                         <h3>Backend</h3>
                         <div class="skill"><span>Node.js</span>
-                            <div class="track"><i class="fill" data-level="75"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="75"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>Express.js</span>
-                            <div class="track"><i class="fill" data-level="75"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="75"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>REST API design</span>
-                            <div class="track"><i class="fill" data-level="78"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="78"><i class="fill" data-level="78"></i></div>
                         </div>
                         <div class="skill"><span>JWT and bcrypt</span>
-                            <div class="track"><i class="fill" data-level="70"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="70"><i class="fill" data-level="70"></i></div>
                         </div>
                     </article>
                     <article class="skill-group">
                         <h3>Tools</h3>
                         <div class="skill"><span>Git and GitHub</span>
-                            <div class="track"><i class="fill" data-level="85"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="85"><i class="fill" data-level="85"></i></div>
                         </div>
                         <div class="skill"><span>VS Code and Cursor</span>
-                            <div class="track"><i class="fill" data-level="88"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="88"><i class="fill" data-level="88"></i></div>
                         </div>
                         <div class="skill"><span>Vercel</span>
-                            <div class="track"><i class="fill" data-level="72"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="72"><i class="fill" data-level="72"></i></div>
                         </div>
                         <div class="skill"><span>Render</span>
-                            <div class="track"><i class="fill" data-level="70"></i></div>
+                            <div class="track" role="progressbar" aria-label="Skill proficiency" aria-valuemin="0"
+                                aria-valuemax="100" aria-valuenow="70"><i class="fill" data-level="70"></i></div>
                         </div>
                     </article>
                 </div>
@@ -192,7 +216,7 @@
         </section>
 
         <!-- PROJECTS -->
-        <section class="view" id="projects" aria-labelledby="projects-title">
+        <section class="view" id="projects" aria-labelledby="projects-title" tabindex="-1">
             <div class="wrap projects-wrap">
                 <h2 id="projects-title" class="view-title">Projects</h2>
                 <div class="filters" role="group" aria-label="Filter projects">
@@ -285,7 +309,7 @@
         </section>
 
         <!-- CONTACT -->
-        <section class="view" id="contact" aria-labelledby="contact-title">
+        <section class="view" id="contact" aria-labelledby="contact-title" tabindex="-1">
             <div class="wrap contact-wrap">
                 <div class="contact-body">
                     <h2 id="contact-title" class="view-title">Let’s Work Together</h2>
@@ -294,11 +318,12 @@
                     <div class="contact-cards">
                         <a class="contact-card" href="mailto:tayyabazubaid@gmail.com"><span
                                 class="icon">@</span><span><strong>Email</strong><small>tayyabazubaid@gmail.com</small></span></a>
-                        <a class="contact-card" href="https://www.linkedin.com/in/tayyaba-zubaid/"
-                            target="_blank" rel="noopener"><span
-                                class="icon">in</span><span><strong>LinkedIn</strong><small>Tayyaba Zubaid</small></span></a>
+                        <a class="contact-card" href="https://www.linkedin.com/in/tayyaba-zubaid/" target="_blank"
+                            rel="noopener noreferrer"><span
+                                class="icon">in</span><span><strong>LinkedIn</strong><small>Tayyaba
+                                    Zubaid</small></span></a>
                         <a class="contact-card" href="https://github.com/Tayyaba-tz" target="_blank"
-                            rel="noopener"><span
+                            rel="noopener noreferrer"><span
                                 class="icon">gh</span><span><strong>GitHub</strong><small>Tayyaba-tz</small></span></a>
                     </div>
                 </div>

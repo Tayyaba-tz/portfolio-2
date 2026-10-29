@@ -13,6 +13,7 @@
     const setMenu = (open) => {
         menu.classList.toggle('open', open);
         burger.setAttribute('aria-expanded', String(open));
+        burger.setAttribute('aria-label', open ? 'Close navigation menu' : 'Open navigation menu');
     };
     burger.addEventListener('click', (e) => {
         e.stopPropagation();
@@ -66,6 +67,8 @@
             if (current.id === 'skills') resetBars();
         }
         next.classList.add('active');
+        next.setAttribute('aria-hidden', 'false');
+        if (current) current.setAttribute('aria-hidden', 'true');
         navLinks.forEach((link) => {
             const on = link.dataset.target === id;
             link.classList.toggle('active', on);
@@ -108,13 +111,15 @@
     /* ---------- Profile image fallback (shows initials if the photo is missing) ---------- */
     const img = document.getElementById('profile-img');
     const hideImg = () => img.classList.add('is-missing');
-    img.addEventListener('error', hideImg);
-    if (img.complete && img.naturalWidth === 0) hideImg();
+    if (img) {
+        img.addEventListener('error', hideImg);
+        if (img.complete && img.naturalWidth === 0) hideImg();
+    }
 
     /* ---------- Initial view ---------- */
     const startId = location.hash.slice(1);
     const initial = views.some((v) => v.id === startId) ? startId : 'home';
-    views.forEach((v) => v.classList.remove('active'));
+    views.forEach((v) => { v.classList.remove('active'); v.setAttribute('aria-hidden', 'true'); });
     show(initial, false);
 })();
 
@@ -137,6 +142,7 @@
     order.forEach((id, i) => {
         const tag = document.createElement('span');
         tag.className = 'stage-tag';
+        tag.setAttribute('aria-hidden', 'true');
         tag.textContent = '\u2605 ' + stages[i];
         document.getElementById(id).prepend(tag);
     });
@@ -204,6 +210,7 @@
     const lvl = $('#lvl');
     const updateXp = () => {
         xpFill.style.width = (visited.size / order.length) * 100 + '%';
+        xpFill.parentElement.setAttribute('aria-valuenow', String(visited.size));
         lvl.textContent = visited.size === order.length ? 'MAX' : visited.size;
     };
     updateXp();
@@ -250,7 +257,9 @@
         if (started) return;
         started = true;
         startEl.classList.add('hide');
+        startEl.setAttribute('aria-hidden', 'true');
         gated.forEach((el) => { el.inert = false; });
+        document.getElementById('home').focus({ preventScroll: true });
         sfxOn = true;
         soundBtn.setAttribute('aria-pressed', 'true');
         jingle();
@@ -268,6 +277,7 @@
     };
     document.addEventListener('keydown', (e) => {
         if (!started) { if (e.key === 'Enter') begin(); return; }
+        if (e.target.closest('input, textarea, select, [contenteditable="true"]')) return;
         if (e.key === 'ArrowRight') go(1);
         else if (e.key === 'ArrowLeft') go(-1);
         else if (e.key >= '1' && e.key <= '5') {
