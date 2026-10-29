@@ -18,6 +18,17 @@
 
 <body>
 
+    <!-- START SCREEN -->
+    <div class="start-screen" id="start" role="dialog" aria-label="Start screen">
+        <div class="start-inner">
+            <span class="badge badge-accent">Frontend Engineer</span>
+            <p class="start-name">TAYYABA<br><span>ZUBAID</span></p>
+            <div class="load-bar" aria-hidden="true"><i></i></div>
+            <button class="btn btn-primary btn-start" id="start-btn" autofocus>Press Start</button>
+            <p class="start-hint">Press Enter to begin. Use the arrow keys or 1 to 5 to move between stages.</p>
+        </div>
+    </div>
+
     <!-- NAVBAR -->
     <header class="navbar">
         <a class="logo" href="#home" data-target="home">Tayyaba<span>.</span></a>
@@ -31,6 +42,9 @@
             </ul>
         </nav>
         <div class="nav-actions">
+            <div class="hud" aria-label="Progress"><span class="hud-lvl">LVL <b id="lvl">1</b></span><span class="xp"><i
+                        id="xp-fill"></i></span></div>
+            <button class="sound-btn" id="sound" aria-pressed="false" aria-label="Toggle sound effects">SFX</button>
             <a class="btn btn-primary btn-sm" href="assets/Tayyaba_Zubaid_CV.pdf" download>
                 <span class="long-label">Download&nbsp;</span>CV
             </a>
@@ -47,6 +61,17 @@
         <section class="view active" id="home" aria-labelledby="home-title">
             <span class="deco deco-blob" aria-hidden="true"></span>
             <span class="deco deco-ring" aria-hidden="true"></span>
+            <aside class="player-card" aria-label="Player card">
+                <p class="pc-top"><span>Player 1</span><span>Online</span></p>
+                <div class="pc-avatar" aria-hidden="true">TZ</div>
+                <p class="pc-name">Tayyaba Zubaid</p>
+                <p class="pc-class">Class: Frontend Engineer</p>
+                <div class="pc-row"><b>UI</b><span class="mini"><i class="m1"></i></span></div>
+                <div class="pc-row"><b>API</b><span class="mini"><i class="m2"></i></span></div>
+                <div class="pc-row"><b>DSA</b><span class="mini"><i class="m3"></i></span></div>
+                <div class="pc-chips"><span class="tag">React</span><span class="tag">Node.js</span><span
+                        class="tag">C++</span></div>
+            </aside>
             <div class="wrap">
                 <div class="badge-row">
                     <span class="badge badge-accent">Frontend Engineer</span>
@@ -102,64 +127,64 @@
                     <article class="skill-group">
                         <h3>Languages</h3>
                         <div class="skill"><span>JavaScript</span>
-                            <div class="track"><i class="fill" data-level="100"></i></div>
+                            <div class="track"><i class="fill" data-level="85"></i></div>
                         </div>
                         <div class="skill"><span>Python</span>
                             <div class="track"><i class="fill" data-level="80"></i></div>
                         </div>
                         <div class="skill"><span>Java</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>C++</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>SQL</span>
-                            <div class="track"><i class="fill" data-level="90"></i></div>
+                            <div class="track"><i class="fill" data-level="60"></i></div>
                         </div>
                     </article>
                     <article class="skill-group">
                         <h3>Frontend</h3>
                         <div class="skill"><span>HTML5 and CSS3</span>
-                            <div class="track"><i class="fill" data-level="100"></i></div>
+                            <div class="track"><i class="fill" data-level="90"></i></div>
                         </div>
                         <div class="skill"><span>React</span>
-                            <div class="track"><i class="fill" data-level="90"></i></div>
+                            <div class="track"><i class="fill" data-level="82"></i></div>
                         </div>
                         <div class="skill"><span>React Router and Context</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track"><i class="fill" data-level="78"></i></div>
                         </div>
                         <div class="skill"><span>Accessible design</span>
-                            <div class="track"><i class="fill" data-level="90"></i></div>
+                            <div class="track"><i class="fill" data-level="80"></i></div>
                         </div>
                     </article>
                     <article class="skill-group">
                         <h3>Backend</h3>
                         <div class="skill"><span>Node.js</span>
-                            <div class="track"><i class="fill" data-level="85"></i></div>
+                            <div class="track"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>Express.js</span>
-                            <div class="track"><i class="fill" data-level="85"></i></div>
+                            <div class="track"><i class="fill" data-level="75"></i></div>
                         </div>
                         <div class="skill"><span>REST API design</span>
-                            <div class="track"><i class="fill" data-level="88"></i></div>
+                            <div class="track"><i class="fill" data-level="78"></i></div>
                         </div>
                         <div class="skill"><span>JWT and bcrypt</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track"><i class="fill" data-level="70"></i></div>
                         </div>
                     </article>
                     <article class="skill-group">
                         <h3>Tools</h3>
                         <div class="skill"><span>Git and GitHub</span>
-                            <div class="track"><i class="fill" data-level="100"></i></div>
+                            <div class="track"><i class="fill" data-level="85"></i></div>
                         </div>
                         <div class="skill"><span>VS Code and Cursor</span>
-                            <div class="track"><i class="fill" data-level="100"></i></div>
+                            <div class="track"><i class="fill" data-level="88"></i></div>
                         </div>
                         <div class="skill"><span>Vercel</span>
-                            <div class="track"><i class="fill" data-level="100"></i></div>
+                            <div class="track"><i class="fill" data-level="72"></i></div>
                         </div>
                         <div class="skill"><span>Render</span>
-                            <div class="track"><i class="fill" data-level="80"></i></div>
+                            <div class="track"><i class="fill" data-level="70"></i></div>
                         </div>
                     </article>
                 </div>
@@ -269,9 +294,9 @@
                     <div class="contact-cards">
                         <a class="contact-card" href="mailto:tayyabazubaid@gmail.com"><span
                                 class="icon">@</span><span><strong>Email</strong><small>tayyabazubaid@gmail.com</small></span></a>
-                        <a class="contact-card" href="https://www.linkedin.com/in/tayyaba-zubaid/"
+                        <a class="contact-card" href="https://www.linkedin.com/in/tayyaba-zubaid-2553b2379/"
                             target="_blank" rel="noopener"><span
-                                class="icon">in</span><span><strong>LinkedIn</strong><small>Tayyaba Zubaid</small></span></a>
+                                class="icon">in</span><span><strong>LinkedIn</strong><small>tayyaba-zubaid-2553b2379</small></span></a>
                         <a class="contact-card" href="https://github.com/Tayyaba-tz" target="_blank"
                             rel="noopener"><span
                                 class="icon">gh</span><span><strong>GitHub</strong><small>Tayyaba-tz</small></span></a>
