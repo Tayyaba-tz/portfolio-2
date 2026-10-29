@@ -2,6 +2,10 @@
 
 A single-page portfolio for Tayyaba Zubaid, a Computer Science student at Qarshi University and former Frontend Engineering Intern at FlyRank (July to Oct 2026). It is built with plain HTML5, CSS3 and vanilla JavaScript, with no frameworks and no build step.
 
+## Live Site
+
+**Vercel:** https://portfolio-2-tau.vercel.app/
+
 ## Features
 
 - **No scrolling.** `html` and `body` use `overflow: hidden`, and every view is sized to fit the viewport.
@@ -30,7 +34,7 @@ portfolio/
 │   └── main.js
 └── assets/
     ├── Tayyaba_Zubaid_CV.pdf
-    └── profile.jpg        (add your own photo)
+    └── profile.png
 ```
 
 ## Running locally
@@ -63,11 +67,11 @@ Then visit `http://localhost:8000`.
 - **Palette:** `#E81760` for primary buttons and highlights, `#F0A01D` for badges and accents, `#E6A5CD` for soft backgrounds and decoration, plus `#000000` and `#FFFFFF` for text and contrast.
 - **Fitting the viewport:** the projects grid changes by screen size (2 by 4 on phones, 3 by 3 on tablets, 4 by 2 on desktops) so all seven cards stay visible without scrolling.
 
-## Deploying
+## Contact
 
-Because the site is static, you can deploy it by dragging the `portfolio` folder onto Netlify, or by pushing it to GitHub and enabling GitHub Pages or Vercel.
+- Email: tayyabazubaid@gmail.com
+- LinkedIn: [tayyaba-zubaid](https://www.linkedin.com/in/tayyaba-zubaid/)
+- GitHub: [Tayyaba-tz](https://github.com/Tayyaba-tz)
 
-## Known notes
+## Prompts Used
 
-- The email on the Contact card is `tayyabazubaid@gmail.com` (from the CV). Update it if you prefer a different address.
-- The bundled CV PDF still lists the FlyRank internship as "Present". Replace it with an updated version.
