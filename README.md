@@ -12,6 +12,13 @@ A single-page portfolio for Tayyaba Zubaid, a Computer Science student at Qarshi
 - **Responsive.** Works from 360px phones up to large desktops, with a hamburger menu on small screens.
 - **Accessible.** Semantic HTML, visible keyboard focus, `aria-current` on the active link, `aria-pressed` on filters, and reduced-motion support.
 
+## Game layer
+
+- **Start screen** with a loading bar and a Press Start button.
+- **HUD** with a level and XP bar that fills as you discover each stage, plus an achievement toast when all five are found.
+- **Player card** on Home, floating coins and stars with mouse parallax, a typewriter intro, glitch hover on the name and staggered pop-in animations.
+- **Controls:** arrow keys, keys 1 to 5, or swipe left and right. Clicks release a coin burst, and the SFX button toggles retro sound effects.
+
 ## Project structure
 
 ```
